@@ -24,3 +24,9 @@ caddy run --config Caddyfile
 ```
 
 The provided `Caddyfile` serves the built assets and falls back to `index.html` for client-side routing.
+
+For local development, Caddy is also configured to serve the site on [http://localhost](http://localhost). You can run the site in a container with:
+
+```bash
+docker compose up --build
+```

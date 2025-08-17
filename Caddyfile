@@ -1,4 +1,4 @@
-mentor-bot.ru, xn----btbk1aggcnqf.xn--p1ai {
+http://localhost, mentor-bot.ru, xn----btbk1aggcnqf.xn--p1ai {
     root * /usr/share/caddy
     try_files {path} /index.html
     file_server
