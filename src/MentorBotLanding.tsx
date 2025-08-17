@@ -121,7 +121,6 @@ export default function MentorBotLanding() {
           <span className="opacity-80">Telegram</span>
           <span className="opacity-80">OpenAI API</span>
           <span className="opacity-80">Docker</span>
-          <span className="opacity-80">Kubernetes</span>
           <span className="opacity-80">GitHub Actions</span>
         </div>
       </section>
@@ -134,7 +133,7 @@ export default function MentorBotLanding() {
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <Feature icon={<MessageSquare className="h-5 w-5"/>} title="Профили менторов" desc="Шаблоны под цели: алгоритмы, DevOps, английский, бизнес. Тюнинг через YAML/JSON."/>
-          <Feature icon={<Terminal className="h-5 w-5"/>} title="CLI и Docker" desc="Локальный запуск за минуты. Образы и Helm‑чарты для k8s."/>
+          <Feature icon={<Terminal className="h-5 w-5"/>} title="CLI и Docker" desc="Локальный запуск за минуты. Готовый Docker образ."/>
           <Feature icon={<BookOpen className="h-5 w-5"/>} title="Плейбуки обучения" desc="Готовые дорожные карты, квизы и фидбек‑циклы."/>
           <Feature icon={<ShieldCheck className="h-5 w-5"/>} title="Приватность" desc="Храните данные локально. Ключи и провайдеры — через переменные окружения."/>
           <Feature icon={<Share2 className="h-5 w-5"/>} title="Расширяемость" desc="Плагины, вебхуки, интеграции с трекерами задач."/>
@@ -151,15 +150,13 @@ export default function MentorBotLanding() {
               <p className="mt-3 text-gray-300">Выберите способ ниже. Остальное — в README.</p>
               <div className="mt-6 grid gap-4">
                 <InstallCard title="Docker" lines={["git clone https://github.com/ITGROWER/mentorbot","cd mentorbot","docker compose up -d"]}/>
-                <InstallCard title="Python" lines={["pip install -r requirements.txt","export OPENAI_API_KEY=...","python -m mentorbot --mentor devops"]}/>
-                <InstallCard title="Kubernetes" lines={["helm repo add mentorbot https://ITGROWER.github.io/mentorbot","helm install mentorbot mentorbot/mentorbot"]}/>
               </div>
             </div>
             <div>
               <h3 className="text-2xl font-semibold tracking-tight">Конфигурация</h3>
               <p className="mt-3 text-gray-300">Минимальный пример профиля ментора.</p>
               <div className="mt-4 rounded-xl border border-gray-800 bg-gray-900 p-4 font-mono text-xs leading-6 text-gray-200">
-{`mentor: devops\nobjective: \"Подготовка к собеседованию SRE\"\nplan:\n  - kubernetes: networking, storage, security\n  - linux: namespaces, cgroups, perf\n  - python: asyncio, typing, testing\ncheckpoints:\n  - quiz: weekly\n  - project: build ci/cd\nllm:\n  provider: openai\n  model: gpt-4o-mini\n`}
+{`mentor: devops\nobjective: \"Подготовка к собеседованию SRE\"\nplan:\n  - linux: namespaces, cgroups, perf\ncheckpoints:\n  - quiz: weekly\n  - project: build ci/cd\nllm:\n  provider: openai\n  model: gpt-4o-mini\n`}
               </div>
               <div className="mt-4 flex flex-wrap gap-3 text-sm">
                 <a href="https://github.com/ITGROWER/mentorbot" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-gray-800 bg-gray-900 px-3 py-2 hover:border-gray-700"><Download className="h-4 w-4"/>README</a>
@@ -190,11 +187,11 @@ export default function MentorBotLanding() {
           <div>
             <div className="rounded-2xl border border-gray-800 bg-gray-900 p-4">
               <img
-                alt="Demo placeholder"
+                alt="Пример интерфейса MentorBot"
                 className="h-auto w-full rounded-xl"
-                src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1969&auto=format&fit=crop"
+                src="/mentorbot-screenshot.png"
               />
-              <p className="mt-3 text-center text-xs text-gray-500">Скриншот для примера. Замените на свой.</p>
+              <p className="mt-3 text-center text-xs text-gray-500">Пример интерфейса MentorBot.</p>
             </div>
           </div>
         </div>
