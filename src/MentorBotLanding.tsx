@@ -254,7 +254,7 @@ function InstallCard({ title, lines }: { title: string; lines: string[] }) {
           className="text-xs text-gray-400 hover:text-white"
         >Копировать</button>
       </div>
-      <pre className="overflow-x-auto p-4 text-xs text-gray-200">
+      <pre className="overflow-x-auto whitespace-pre-wrap break-words p-4 text-xs text-gray-200">
         <code>{lines.join("\n")}</code>
       </pre>
     </div>
@@ -284,6 +284,6 @@ function ChatBubble({ who, text, right }: { who: string; text: string; right?: b
 function CodeBlock() {
   const code = `# Быстрый старт (Docker)\n\n$ git clone https://github.com/ITGROWER/mentorbot\n$ cd mentorbot\n$ docker compose up -d\n`;
   return (
-    <pre className="overflow-x-auto text-xs text-gray-200"><code>{code}</code></pre>
+    <pre className="overflow-x-auto whitespace-pre-wrap break-words text-xs text-gray-200"><code>{code}</code></pre>
   );
 }
