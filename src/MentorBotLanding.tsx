@@ -282,7 +282,7 @@ function ChatBubble({ who, text, right }: { who: string; text: string; right?: b
 }
 
 function CodeBlock() {
-  const code = `# Быстрый старт (Docker)\n\n$ git clone https://github.com/ITGROWER/mentorbot\n$ cd mentorbot\n$ docker compose up -d\n\n# Первый запуск\n$ mentorbot --mentor devops --goal \"готовлюсь к собесу\"\n\n# Добавить шаблон ментора\n$ mentorbot template add devops.yaml\n`;
+  const code = `# Быстрый старт (Docker)\n\n$ git clone https://github.com/ITGROWER/mentorbot\n$ cd mentorbot\n$ docker compose up -d\n`;
   return (
     <pre className="overflow-x-auto text-xs text-gray-200"><code>{code}</code></pre>
   );
